@@ -5,6 +5,7 @@
 	{
 		header('Location: login.php');
 	}
+	$uname = $_SESSION["uname"];
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +19,8 @@
 <body>
     <div class="container">
             <div class="row">
-                <h3>Welcome!</h3>
-				<p><a href="logout.php" class="btn btn-danger">Logout</a></p>
+                <h3>Welcome! <?php  echo "$uname"; ?> <a href="logout.php" class="btn btn-danger">Logout</a></h3>
+				<p>Here you can create, modify, and update quizzes for this website. </p>
             </div>
             <div class="row">              
                 <table class="table table-striped table-bordered">
