@@ -14,6 +14,7 @@
 		
 		// Session Information
 		$sess_id = "ilovejapanese";
+		$sess_uname = $uname;
 		
 		$pdo = Database::connect();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,6 +29,8 @@
 		if($count > 0)
 		{
 			$_SESSION["id"] = $sess_id;
+			$_SESSION["uname"] = $sess_uname;
+			
 			if ($_SERVER['HTTP_REFERER'] == "http://csis.svsu.edu/~cjspiece/personal_project/index.php" ||
 			$_SERVER['HTTP_REFERER'] == "http://csis.svsu.edu/~cjspiece/personal_project/login.php")
 			{
